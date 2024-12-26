@@ -216,6 +216,9 @@
         
         <script>
         document.addEventListener('scroll', function() {
+            window.addEventListener('scroll', playAudio, { once: true });
+            window.addEventListener('touchstart', playAudio, { once: true });
+            window.addEventListener('click', playAudio, { once: true });
             document.getElementById('bgMusic').play();
         }, { once: true });
         </script>
